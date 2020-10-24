@@ -35,6 +35,7 @@ module VagrantPlugins
                 b2.use HandleBox
                 b2.use HandleBoxImage
                 b2.use CreateDomainVolume
+                b2.use CloudInitSetup
                 b2.use CleanupDisks
                 b2.use Disk
                 b2.use CreateDomain

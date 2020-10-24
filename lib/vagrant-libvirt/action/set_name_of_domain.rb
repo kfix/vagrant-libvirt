@@ -29,6 +29,10 @@ module VagrantPlugins
                   domain_name: env[:domain_name]
           end
 
+          # CloudInitSetup needs an initial value for id...
+          env[:machine].id = env[:domain_name]
+          # CreateDomain will replace this with a UUID later
+
           @app.call(env)
         end
 
